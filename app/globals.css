@@ -2,20 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Simple base styles */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-white text-gray-900;
+}
+
+/* Custom utility classes if needed */
+@layer utilities {
+  .text-green-600 {
+    color: #2e7d32;
+  }
+
+  .bg-green-800 {
+    background-color: #1b5e20;
+  }
+
+  .hover\:bg-green-700:hover {
+    background-color: #2e7d32;
+  }
+
+  .focus\:ring-green-500:focus {
+    --tw-ring-color: #4caf50;
+  }
 }
