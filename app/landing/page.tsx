@@ -15,7 +15,7 @@ export default function LandingPage() {
           </div>
 
           <div className="mt-4 mb-8 md:mb-0">
-            <Image src="/house.jpg" alt="Modern Property" width={500} height={300} className="rounded-md" priority />
+            <Image src="/property.png" alt="Modern Property" width={500} height={300} className="rounded-md" priority />
           </div>
         </div>
 
@@ -28,10 +28,17 @@ export default function LandingPage() {
           </Link>
 
           <Link
-            href="/propertyowner/signup"
+            href="/propertyowner/signu"
             className="w-full bg-[#b8c75b] hover:bg-[#a3b148] text-center py-3 px-4 rounded-md text-green-900 font-medium transition-colors"
           >
             Sign Up
+          </Link>
+
+          <Link
+            href="/admin/login"
+            className="w-full bg-[#8ba43c] hover:bg-[#7a9230] text-center py-3 px-4 rounded-md text-white font-medium transition-colors"
+          >
+            Admin Login
           </Link>
         </div>
       </div>

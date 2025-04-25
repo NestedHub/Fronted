@@ -113,7 +113,7 @@ export default function SignUpForm() {
 
         <div className="text-center text-sm">
           {"Already have an account? "}
-          <Link href="/login" className="text-green-600 hover:underline">
+          <Link href="/propertyowner/login" className="text-green-600 hover:underline">
             Login
           </Link>
         </div>
