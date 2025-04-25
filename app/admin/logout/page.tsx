@@ -3,39 +3,38 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
-import Sidebar from "@/component/dashoboadpropertyowner/sidebar"
+import AdminSidebar from "@/component/admin/sidebar"
 
-export default function LogoutPage() {
+export default function AdminLogoutPage() {
   const router = useRouter()
   const [isLoading, setIsLoading] = useState(false)
 
   const handleCancel = () => {
-    router.push("/dashboard")
+    router.push("/admin/dashboard")
   }
 
   const handleConfirm = () => {
     setIsLoading(true)
 
-    // Clear user data from storage
-    localStorage.removeItem("user")
-    sessionStorage.removeItem("user")
+    // Clear admin data from storage
+    localStorage.removeItem("admin")
 
-    // Redirect to login page after a short delay
+    // Redirect to admin login page after a short delay
     setTimeout(() => {
-      router.push("/login")
+      router.push("/admin-login")
     }, 1000)
   }
 
   return (
-    <Sidebar>
+    <AdminSidebar>
       <div className="flex flex-col items-center justify-center min-h-[80vh] p-6">
         <div className="mb-4">
-          <Image src="/logogreen.png" alt="NestedHub Logo" width={200} height={60} />
+          <Image src="/logo-green.svg" alt="NestedHub Logo" width={150} height={60} />
         </div>
 
         <h1 className="text-2xl font-bold mb-6">Log Out</h1>
 
-        <p className="text-lg mb-8">Are you sure to log out?</p>
+        <p className="text-lg mb-8">Are you sure you want to log out?</p>
 
         <div className="flex space-x-4">
           <button
@@ -49,12 +48,12 @@ export default function LogoutPage() {
           <button
             onClick={handleConfirm}
             disabled={isLoading}
-            className="bg-[#b8c75b] hover:bg-[#a3b148] text-white py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+            className="bg-green-800 hover:bg-green-700 text-white py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
           >
             {isLoading ? "Logging out..." : "Confirm"}
           </button>
         </div>
       </div>
-    </Sidebar>
+    </AdminSidebar>
   )
 }
