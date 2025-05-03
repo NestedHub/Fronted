@@ -1,3 +1,4 @@
+// app/components/LandingPage.tsx
 import Image from "next/image"
 import Link from "next/link"
 
@@ -28,7 +29,7 @@ export default function LandingPage() {
           </Link>
 
           <Link
-            href="/propertyowner/signu"
+            href="/propertyowner/signup"
             className="w-full bg-[#b8c75b] hover:bg-[#a3b148] text-center py-3 px-4 rounded-md text-green-900 font-medium transition-colors"
           >
             Sign Up
