@@ -1,3 +1,4 @@
+// app/components/LandingPage.tsx
 import Image from "next/image"
 import Link from "next/link"
 
@@ -6,8 +7,8 @@ export default function LandingPage() {
     <main className="flex min-h-screen bg-green-800 text-white">
       <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between">
         <div className="w-full md:w-1/2 flex flex-col">
-          <div className="mb-2">
-            <Image src="/logowhite.png" alt="NestedHub Logo" width={200} height={40} />
+          <div className="mb-8">
+            <Image src="/logo.png" alt="NestedHub Logo" width={120} height={40} className="invert" priority />
           </div>
 
           <div className="mb-8">
@@ -15,7 +16,7 @@ export default function LandingPage() {
           </div>
 
           <div className="mt-4 mb-8 md:mb-0">
-            <Image src="/house.jpg" alt="Modern Property" width={500} height={300} className="rounded-md" priority />
+            <Image src="/house.png" alt="Modern Property" width={500} height={300} className="rounded-md" priority />
           </div>
         </div>
 
@@ -28,7 +29,7 @@ export default function LandingPage() {
           </Link>
 
           <Link
-            href="/propertyowner/signu"
+            href="/propertyowner/signup"
             className="w-full bg-[#b8c75b] hover:bg-[#a3b148] text-center py-3 px-4 rounded-md text-green-900 font-medium transition-colors"
           >
             Sign Up
