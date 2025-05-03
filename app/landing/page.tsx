@@ -7,7 +7,7 @@ export default function LandingPage() {
       <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between">
         <div className="w-full md:w-1/2 flex flex-col">
           <div className="mb-8">
-            <Image src="/logo.svg" alt="NestedHub Logo" width={120} height={40} className="invert" priority />
+            <Image src="/logo.png" alt="NestedHub Logo" width={120} height={40} className="invert" priority />
           </div>
 
           <div className="mb-8">
@@ -15,7 +15,7 @@ export default function LandingPage() {
           </div>
 
           <div className="mt-4 mb-8 md:mb-0">
-            <Image src="/property.png" alt="Modern Property" width={500} height={300} className="rounded-md" priority />
+            <Image src="/house.png" alt="Modern Property" width={500} height={300} className="rounded-md" priority />
           </div>
         </div>
 
