@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { Search, Eye, Trash2 } from "lucide-react"
+import { Search, Eye } from "lucide-react"
 import AdminSidebar from "@/component/admin/sidebar"
 import Pagination from "@/component/admin/pagination"
 
@@ -10,39 +10,39 @@ import Pagination from "@/component/admin/pagination"
 const mockPropertyOwners = [
   {
     id: "1",
-    name: "Song Lyna",
+    name: "Song Lyne",
     phone: "0987654321",
-    email: "song@gmail.com",
+    email: "lyne@gmail.com",
   },
   {
     id: "2",
-    name: "Song Lyna",
+    name: "Song Lyne",
     phone: "0987654321",
-    email: "song@gmail.com",
+    email: "lyne@gmail.com",
   },
   {
     id: "3",
-    name: "Song Lyna",
+    name: "Song Lyne",
     phone: "0987654321",
-    email: "song@gmail.com",
+    email: "lyne@gmail.com",
   },
   {
     id: "4",
-    name: "Song Lyna",
+    name: "Song Lyne",
     phone: "0987654321",
-    email: "song@gmail.com",
+    email: "lyne@gmail.com",
   },
   {
     id: "5",
-    name: "Song Lyna",
+    name: "Song Lyne",
     phone: "0987654321",
-    email: "song@gmail.com",
+    email: "lyne@gmail.com",
   },
   {
     id: "6",
-    name: "Song Lyna",
+    name: "Song Lyne",
     phone: "0987654321",
-    email: "song@gmail.com",
+    email: "lyne@gmail.com",
   },
 ]
 
@@ -58,13 +58,8 @@ export default function PropertyOwnerPage() {
       owner.email.toLowerCase().includes(searchTerm.toLowerCase()),
   )
 
-  const handleDelete = (id: string) => {
-    console.log(`Delete property owner with ID: ${id}`)
-    // In a real app, you would call an API to delete the property owner
-  }
-
   const handleView = (id: string) => {
-    router.push(`/admin/user-management/property-owner/${id}`)
+    router.push(`/admin/usermanagement/propertyowner/${id}`)
   }
 
   return (
@@ -130,13 +125,6 @@ export default function PropertyOwnerPage() {
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{owner.email}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     <div className="flex space-x-2">
-                      <button
-                        onClick={() => handleDelete(owner.id)}
-                        className="text-red-600 hover:text-red-900"
-                        title="Delete"
-                      >
-                        <Trash2 size={18} />
-                      </button>
                       <button
                         onClick={() => handleView(owner.id)}
                         className="text-gray-600 hover:text-gray-900"

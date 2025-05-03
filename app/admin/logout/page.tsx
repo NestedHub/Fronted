@@ -29,7 +29,7 @@ export default function AdminLogoutPage() {
     <AdminSidebar>
       <div className="flex flex-col items-center justify-center min-h-[80vh] p-6">
         <div className="mb-4">
-          <Image src="/logo-green.svg" alt="NestedHub Logo" width={150} height={60} />
+          <Image src="/logogreen.png" alt="NestedHub Logo" width={200} height={60} />
         </div>
 
         <h1 className="text-2xl font-bold mb-6">Log Out</h1>
