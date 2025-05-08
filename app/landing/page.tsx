@@ -7,8 +7,8 @@ export default function LandingPage() {
     <main className="flex min-h-screen bg-green-800 text-white">
       <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between">
         <div className="w-full md:w-1/2 flex flex-col">
-          <div className="mb-8">
-            <Image src="/logo.png" alt="NestedHub Logo" width={120} height={40} className="invert" priority />
+          <div className="mb-4">
+            <Image src="/logowhite.png" alt="NestedHub Logo" width={140} height={60} />
           </div>
 
           <div className="mb-8">
