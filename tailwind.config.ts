@@ -49,13 +49,26 @@ module.exports = {
           700: "#2e7d32",
           800: "#1b5e20",
         },
-        borderRadius: {
-          lg: "var(--radius)",
-          md: "calc(var(--radius) - 2px)",
-          sm: "calc(var(--radius) - 4px)",
+      },
+      borderRadius: { // Moved outside colors
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        dropdown: {
+          from: { opacity: '0', transform: 'translateY(-10px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
         },
+      },
+      animation: {
+        dropdown: 'dropdown 0.2s ease-out',
+      },
+      fontFamily: {
+        sans: ['var(--font-geist-sans)', 'sans-serif'],
+        mono: ['var(--font-geist-mono)', 'monospace'],
       },
     },
   },
   plugins: [],
-}
+};

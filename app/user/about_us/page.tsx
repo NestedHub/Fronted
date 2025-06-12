@@ -1,124 +1,146 @@
 import Image from "next/image";
-import { FaGlobe, FaUsers, FaShieldAlt, FaHome } from "react-icons/fa";
-
+import { Globe, Monitor, FileText, Shield } from "lucide-react";
+import luxuryHouse from '@/public/images/luxury_house.jpg'; // Adjust path if needed
 export default function AboutUs() {
   return (
-    <div className="bg-gray-100 min-h-screen">
-      {/* Header Section */}
-      <section className="bg-white py-10">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center text-gray-800 mb-4">
-            ABOUT NESTHUB
+    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="mb-12 mt-10">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center sm:text-left">
+            About NestHub
           </h1>
-        </div>
-      </section>
+          <hr className="border-gray-300 mb-8" />
 
-      {/* Welcome Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
-          {/* Text Content */}
-          <div className="md:w-1/2 mb-8 md:mb-0">
-            <h2 className="text-3xl font-semibold text-gray-800 mb-4">
-              WELCOME TO NESTHUB, YOUR TRUSTED PARTNER IN CONNECTING PEOPLE
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-              Nestled in the vibrant heart of Phnom Penh, Cambodia, and proudly
-              opened as a dedicated local business by THE ROYAL UNIVERSITY OF
-              PHNOM PENH, we believe that finding the right home shouldn’t be a
-              stressful hunt—it should be an exciting journey! At NESTHUB, we’re
-              committed to making that journey seamless by connecting people with
-              their ideal homes, no matter where they are in the world. Whether
-              you’re searching for a cozy apartment, a spacious villa, a
-              commercial property, or a chance to list your own space, we’ve got
-              you covered. Our platform is designed to bridge the gap between
-              property seekers and owners, offering a user-friendly experience
-              that caters to a variety of needs.
+          {/* Introduction Text */}
+          <div className="space-y-6 text-gray-700 leading-relaxed text-base sm:text-lg">
+            <p>
+              Welcome to NestHub, your trusted partner in connecting people to their ideal homes, no matter where they
+              are in the world. Nestled in the vibrant heart of Phnom Penh, Cambodia, and proudly operated by a
+              dedicated team based at The Royal University of Phnom Penh, NestHub stands as a beacon for seamless real
+              estate transactions. Our platform was created with a singular goal: to make buying, selling, and renting
+              homes easier, more secure, and more accessible for everyone.
+            </p>
+            <p>
+              At NestHub, we believe that finding the right home shouldn&apos;t be stressful—it should be an exciting
+              venture, full of possibilities. Whether you&apos;re searching for a cozy apartment, a spacious villa, or a
+              commercial property, our diverse listings cater to a variety of needs and budgets. We&apos;ve designed our
+              platform to empower users with intuitive tools, ensuring a smooth experience from browsing to finalizing a
+              deal.
             </p>
           </div>
-          {/* Image */}
-          <div className="md:w-1/2">
-            <Image
-              src="/path-to-your-image.jpg" // Replace with the actual path to your image
-              alt="Nesthub Property"
-              width={500}
-              height={300}
-              className="rounded-lg shadow-lg"
-            />
-          </div>
         </div>
-      </section>
 
-      {/* Mission Section */}
-      <section className="bg-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-4">
-            OUR MISSION
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Our mission is to bridge the gap between property seekers and owners
-            by providing a seamless, technology-driven solution that simplifies
-            the real estate process. We aim to empower our users with the right
-            tools, resources, and support to make informed decisions.
-          </p>
-        </div>
-      </section>
+        {/* Our Mission Section */}
+        <div className="mb-16">
+          <div className="grid md:grid-cols-2 gap-14 items-center">
+            <div className="order-2 md:order-1">
+              <Image
+                  src={luxuryHouse}
+                  alt="Luxury house with pool at night"
+                  width={400}
+                  height={300}
+                  className="rounded-lg shadow-lg w-full h-auto object-cover"
+                />
 
-      {/* Why Choose Us Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-gray-800 text-center mb-12">
-            WHY CHOOSE NESTHUB?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Card 1 */}
-            <div className="flex flex-col items-center text-center">
-              <FaGlobe className="text-4xl text-blue-600 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                GLOBAL REACH, LOCAL EXPERTISE
-              </h3>
-              <p className="text-gray-600">
-                Our platform connects you with properties worldwide, while our
-                local expertise ensures you get the best insights and
-                opportunities in Cambodia.
-              </p>
             </div>
-            {/* Card 2 */}
-            <div className="flex flex-col items-center text-center">
-              <FaUsers className="text-4xl text-blue-600 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                USER-CENTRIC DESIGN
-              </h3>
-              <p className="text-gray-600">
-                Our platform is designed with you in mind, offering an intuitive
-                interface to list, search, and manage properties with just a few
-                clicks.
-              </p>
-            </div>
-            {/* Card 3 */}
-            <div className="flex flex-col items-center text-center">
-              <FaShieldAlt className="text-4xl text-blue-600 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                SECURITY AND TRUST
-              </h3>
-              <p className="text-gray-600">
-                We vet and verify all properties to ensure transparency,
-                fostering trust between buyers, renters, and property owners.
-              </p>
-            </div>
-            {/* Card 4 */}
-            <div className="flex flex-col items-center text-center">
-              <FaHome className="text-4xl text-blue-600 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                COMPREHENSIVE LISTINGS
-              </h3>
-              <p className="text-gray-600">
-                From luxury homes to budget-friendly rentals, we offer a wide
-                range of properties tailored to diverse needs and preferences.
+            <div className="order-1 md:order-2">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+              <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+                Our mission is to bridge the gap between homeowners, buyers, and renters through technology-driven
+                solutions that simplify the real estate process. We strive to be more than just a marketplace; we aim to
+                be a trusted advisor that supports informed decisions, fosters connections, and facilitates success in
+                property transactions.
               </p>
             </div>
           </div>
         </div>
-      </section>
+        <hr className="border-gray-300 mb-8" />
+
+        {/* Why Choose NestHub Section */}
+        <div className="max-w-6xl mx-auto px-4 py-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-16">Why Choose NESTHUB ?</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-14 max-w-7xl mx-auto">
+            {/* Global Reach, Local Expertise */}
+            <div className="text-center">
+              <div className="flex justify-center mb-6">
+                <Globe className="w-16 h-16 text-gray-700" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Global Reach, Local Expertise</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">
+                While we cater to an international audience, our roots and understanding of the Cambodian market set us
+                apart. We offer expert insights and a localized approach that benefits both domestic and international
+                clients.
+              </p>
+            </div>
+
+            {/* User-Centric Design */}
+            <div className="text-center">
+              <div className="flex justify-center mb-6">
+                <div className="relative">
+                  <Monitor className="w-16 h-16 text-gray-700" strokeWidth={1.5} />
+                  <div className="absolute -top-1 -right-1 w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center">
+                    <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">User-Centric Design</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">
+                Our platform prioritizes ease of use, allowing users to filter searches, schedule property viewings, and
+                access detailed property information with just a few clicks.
+              </p>
+            </div>
+
+            {/* Security and Trust */}
+            <div className="text-center">
+              <div className="flex justify-center mb-6">
+                <div className="relative">
+                  <div className="w-16 h-16 flex items-center justify-center">
+                    {/* Handshake base */}
+                    <svg className="w-12 h-12 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
+                      />
+                    </svg>
+                  </div>
+                  {/* Shield overlay */}
+                  <div className="absolute -top-1 -right-1">
+                    <Shield className="w-6 h-6 text-green-600 fill-green-100" strokeWidth={2} />
+                  </div>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Security and Trust</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">
+                We vet and verify our property listings to ensure a safe and reliable experience, promoting trust between
+                buyers, sellers, and renters.
+              </p>
+            </div>
+
+            {/* Comprehensive Listings */}
+            <div className="text-center">
+              <div className="flex justify-center mb-6">
+                <div className="relative">
+                  <FileText className="w-16 h-16 text-gray-700" strokeWidth={1.5} />
+                  <div className="absolute bottom-0 right-0 transform translate-x-1 translate-y-1">
+                    <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center">
+                      <div className="w-3 h-3 border-2 border-gray-600 rounded-sm bg-white"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Comprehensive Listings</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">
+                From luxury homes to budget-friendly rentals, we provide a vast range of properties tailored to diverse
+                preferences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

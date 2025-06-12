@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Simple base styles */
+/* Custom styles */
+:root {
+  --font-geist-sans: 'GeistSans', sans-serif;
+  --font-geist-mono: 'GeistMono', monospace;
+}
+
+/* Simple base styles - Default light mode */
 body {
   @apply bg-white text-gray-900;
 }
@@ -23,5 +29,36 @@ body {
 
   .focus\:ring-green-500:focus {
     --tw-ring-color: #4caf50;
+  }
+}
+
+/* Dark mode styles - Applied only when .dark class is present */
+@layer base {
+  .dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+
+  .dark .bg-white {
+    @apply bg-gray-800;
+  }
+
+  .dark .text-gray-900 {
+    @apply text-gray-100;
+  }
+
+  .dark .text-green-600 {
+    color: #4caf50; /* Lighter green for contrast in dark mode */
+  }
+
+  .dark .bg-green-800 {
+    background-color: #2e7d32; /* Adjusted for visibility */
+  }
+
+  .dark .hover\:bg-green-700:hover {
+    background-color: #4caf50; /* Lighter hover effect */
+  }
+
+  .dark .focus\:ring-green-500:focus {
+    --tw-ring-color: #66bb6a; /* Softer green ring in dark mode */
   }
 }

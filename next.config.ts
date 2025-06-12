@@ -9,25 +9,39 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**', // Allows all paths under this hostname
       },
+      // Add the new configuration here
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+        port: '',
+        pathname: '/**', // Allows all paths under this hostname
+      },
     ],
   },
-  webpackDevMiddleware: (config) => {
+  
+  webpackDevMiddleware: (config: { watchOptions: { poll: number; }; }) => {
     config.watchOptions = {
       poll: 1000, // Check for file changes every 1000ms (1 second)
     };
     return config;
   },
-  headers: async () => [
-    {
-      source: '/:path*',
-      headers: [
+  headers: async () => {
+    if (process.env.NODE_ENV === 'development') {
+      return [
         {
-          key: 'Cache-Control',
-          value: 'no-store, max-age=0', // Disable caching in development
+          source: '/:path*',
+          headers: [
+            {
+              key: 'Cache-Control',
+              value: 'no-store, max-age=0', // Disable caching in development
+            },
+          ],
+          
         },
-      ],
-    },
-  ],
+      ];
+    }
+    return []; // No custom headers in production
+  },
 };
 
 export default nextConfig;

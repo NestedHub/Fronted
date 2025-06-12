@@ -14,13 +14,13 @@ export default function Footer({ userType = "user" }: FooterProps) {
 
           <div className="flex flex-col md:flex-row">
             <div className="md:w-1/3 mb-6 md:mb-0">
-              <Image src="/logo-green.svg" alt="NestedHub Logo" width={150} height={60} className="mb-4" />
+              <Image src="/logogreen.png" alt="NestedHub Logo" width={150} height={60} className="mb-4" />
             </div>
 
             <div className="md:w-2/3">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-600"> 
                     <span className="font-medium">Customer support:</span> support@nestedhub.com
                   </p>
                   <p className="text-sm text-gray-600">
